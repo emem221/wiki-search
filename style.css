@@ -1,0 +1,117 @@
+body {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 15px;
+    margin: 30px 8px;
+    box-sizing: border-box;
+}
+
+.searchForm-container {
+    width: 400px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    padding: 1em;
+}
+
+.searchForm {
+    margin: 25px;
+    margin-left: 80px;
+    display: flex;
+    background-color: #292929;
+}
+
+.searchForm-input {
+    background: transparent;
+    border: none;
+    height: 44px;
+    width: 100%;
+    padding: 1em;
+    color: white;
+    font-size: 17px;
+    outline: none;
+}
+
+.icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background-color: #292929;
+}
+
+.searchResults {
+    padding: 1em;
+    width: 400px;
+}
+
+.resultItem {
+    margin-bottom: 20px;
+    animation: show 0.5s forwards ease-in-out;
+    color: white;
+    border-radius: 2px;
+    padding: 10px;
+    width: 100%;
+}
+
+.resultItem:hover {
+    background-color: #0d091f;
+}
+
+.resultItem-title {
+    margin-bottom: 4px;
+}
+
+.resultItem-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.resultItem-title a:hover {
+    text-decoration: underline;
+}
+
+.resultItem-snippet,
+.resultItem-link {
+    color: #c2c2c2;
+    font-size: 13px;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+        background-blend-mode: multiply;
+    }
+    .searchForm-container {
+        width: 1100px;
+    }
+    .searchResults {
+        width: 100%;
+    }
+    .searchForm-input {
+        font-size: 25px;
+    }
+    .resultItem-snippet,
+    .resultItem-link {
+        font-size: 18px;
+    }
+    .resultItem:hover {
+        background-color: #434343;
+    }
+}
