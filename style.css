@@ -47,7 +47,7 @@ body {
 
 .searchResults {
     padding: 1em;
-    width: 400px;
+    width: 350px;
 }
 
 .resultItem {
@@ -115,5 +115,18 @@ body {
     }
     .resultItem:hover {
         background-color: #434343;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    body {
+        width: auto;
+        height: auto;
+        padding: 1em;
+        background: linear-gradient(to right, #363795, #005C97);
+    }
+    .searchForm-input {
+        height: 50px;
+        font-size: 20px;
     }
 }
